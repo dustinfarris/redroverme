@@ -127,6 +127,7 @@ COMPRESS_PRECOMPILERS = (
   ('text/x-sass', 'sass {infile} {outfile}'),
   ('text/x-scss', 'sass --scss {infile} {outfile}'),
 )
+COMPRESS_PARSER = 'compressor.parser.HtmlParser'
 
 LOGGING = {
   'version': 1,
