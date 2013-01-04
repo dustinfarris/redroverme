@@ -1,0 +1,2 @@
+ipdb>=0.7
+django-debug-toolbar>=0.9.4
