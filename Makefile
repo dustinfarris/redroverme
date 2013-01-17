@@ -7,7 +7,7 @@ develop:
 	pip install -r requirements-test.txt --use-mirrors
 	pip install -r requirements.txt --use-mirrors
 	easy_install readline
-	touch redroverme/settings/__init__.py
+	echo "from development import *" > redroverme/settings/__init__.py
 
 test-python:
 	@echo "Running Python tests"
