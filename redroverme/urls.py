@@ -11,7 +11,8 @@ from django.views.generic.simple import direct_to_template
 logger = logging.getLogger(__name__)
 
 
-logger.debug(handler404, handler500)
+repr(handler404)
+repr(handler500)
 handler404 = 'redroverme.views.page_not_found'
 handler500 = 'redroverme.views.server_error'
 
