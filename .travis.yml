@@ -1,0 +1,16 @@
+language: python
+python:
+  - "2.7"
+env:
+  - DJANGO=1.4.3
+install:
+  - sudo apt-get install -qq libxapian22 python-xapian
+  - ln -s /usr/lib/python2.7/dist-packages/xapian $VIRTUAL_ENV/lib/python2.7/site-packages/.
+  - pip install -q Django==$DJANGO --use-mirrors
+  - make develop
+before_script:
+  - createuser -s -U postgres web
+  - createdb -U postgres redroverme
+  - touch redroverme/settings/__init__.py
+script:
+  - make test
